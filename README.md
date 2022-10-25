@@ -91,13 +91,13 @@ That could look like this:
                         
 ### What’s our runtime now?
 
-Well, our outer for loop goes through all the times and prices, but our inner for loop goes through one fewer price each time. So our total number of steps is the sum n + (n - 1) + (n - 2) ... + 2 + 1n+(n−1)+(n−2)...+2+1 , which is still O(n**2) time.
+Well, our outer for loop goes through all the times and prices, but our inner for loop goes through one fewer price each time. So our total number of steps is the sum n + (n - 1) + (n - 2) ... + 2 + 1n+(n−1)+(n−2)...+2+1, which is still O(n**2) time.
 
 We can do better!
 
-If we're going to do better than O(n**2), we're probably going to do it in either O(n\lg{n})O(nlgn) or O(n)O(n). O(n\lg{n})O(nlgn) comes up in sorting and searching algorithms where we're recursively cutting the list in half. It's not obvious that we can save time by cutting the list in half here. Let's first see how well we can do by looping through the list only once.
+If we're going to do better than O(n**2), we're probably going to do it in either O(n lg n) or O(n). O(n lg n) comes up in sorting and searching algorithms where we're recursively cutting the list in half. It's not obvious that we can save time by cutting the list in half here. Let's first see how well we can do by looping through the list only once.
 
-Since we're trying to loop through the list once, let's use a greedy ↴ approach, where we keep a running max_profit until we reach the end. We'll start our max_profit at $0. As we're iterating, how do we know if we've found a new max_profit?
+Since we're trying to loop through the list once, let's use a greedy approach, where we keep a running max_profit until we reach the end. We'll start our max_profit at $0. As we're iterating, how do we know if we've found a new max_profit?
 
 At each iteration, our max_profit is either:
 
