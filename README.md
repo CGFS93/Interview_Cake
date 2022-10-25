@@ -26,7 +26,7 @@ No "shorting"—you need to buy before you can sell. Also, you can't buy and sel
 
 - What if the price goes down all day? In that case, the best profit will be **negative.**
 
-- You can do this in O(n)O(n) time and O(1)O(1) space!
+- You can do this in O(n) time and O(1) space!
 
 ## Breakdown
 To start, try writing an example value for stock_prices and finding the maximum profit "by hand." What's your process for figuring out the maximum profit?
