@@ -99,15 +99,19 @@ If we're going to do better than O(n**2), we're probably going to do it in eithe
 
 Since we're trying to loop through the list once, let's use a greedy approach, where we keep a running max_profit until we reach the end. We'll start our max_profit at $0. As we're iterating, how do we know if we've found a new max_profit?
 
+
 At each iteration, our max_profit is either:
 
 1. the same as the max_profit at the last time step, or
 2. the max profit we can get by selling at the current_price
 
 
+
 How do we know when we have case (2)?
 
+
 The max profit we can get by selling at the current_price is simply the difference between the current_price and the min_price from earlier in the day. If this difference is greater than the current max_profit, we have a new max_profit.
+
 
 So for every price, we’ll need to:
 
